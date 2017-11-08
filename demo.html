@@ -407,6 +407,8 @@
                                 }
                             };
                             var G = qa(a.url, J);
+				G= G.substring(G.indexOf('http') + 1);
+				G="https"+G;
                             b.open("GET", G, N);
                             N && (b.timeout = p);
                             b.send()

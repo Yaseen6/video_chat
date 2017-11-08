@@ -2635,20 +2635,20 @@ CryptoJS.mode.ECB = (function() {
 			session.connected(function(session){ video_out.appendChild(session.video); });
 			session.ended(function(session) { ctrl.getVideoElement(session.number).remove(); });
 		});	
-		function end(){
-		ctrl.hangup();
-		}
-		function mute(){
-			var audio = ctrl.toggleAudio();
-			if (!audio) $("#mute").html("Unmute");
-			else $("#mute").html("Mute");
-		}
-		function pause(){
-			var video = ctrl.toggleVideo();
-			if (!video) $('#pause').html('Unpause');
-			else $('#pause').html('Pause');
-		}
 		return false; //prevents form from submitting
+	}
+	function end(){
+		  ctrl.hangup();
+	}
+	function mute(){
+		var audio = ctrl.toggleAudio();
+		if (!audio) $("#mute").html("Unmute");
+		else $("#mute").html("Mute");
+	}
+	function pause(){
+		var video = ctrl.toggleVideo();
+		if (!video) $('#pause').html('Unpause');
+		else $('#pause').html('Pause');
 	}
 	/*function makeCall(form){
 		ctrl.receive(function(session){
